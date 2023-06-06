@@ -11,7 +11,24 @@ const MainPage = () => {
 
   const [img, setImg] = useState(false);
 
-  const createImg = () => {};
+  const createImg = async () => {
+    if (form.prompt) {
+      try {
+        setImg(true);
+        const res = await fetch("http://localhost:3001/api/v1/dalle", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ prompt: form.prompt }),
+        });
+        const data = await res.json();
+        setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo} ` });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
 
   const handleSubmit = () => {};
 

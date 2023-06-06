@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 
-const MoodForm = ({ labelName, type, name, value, handleChange }) => {
+const MoodForm = ({
+  labelName,
+  type,
+  name,
+  value,
+  handleChange,
+  placeholder,
+}) => {
   return (
     <div>
-      MoodForm
       <label htmlFor={name}> {labelName}</label>
       <input
+        className="bg-slate-200 rounded-lg"
+        placeholder={placeholder}
         type={type}
         id={name}
         name={name}
