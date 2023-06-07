@@ -10,11 +10,8 @@ app.use(express.json()); // Creates req.body
 app.use(morgan("dev"));
 app.use(cors());
 
-app.get("/", async (req, res) => {
-  res.send("Test from Express");
-});
-
 app.use("/api/v1/dalle", require("./routes/dalle"));
+app.use("/api/users", require("./routes/users"));
 
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
