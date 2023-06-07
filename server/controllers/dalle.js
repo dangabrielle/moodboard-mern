@@ -17,10 +17,11 @@ async function create(req, res) {
       prompt,
       n: 1,
       size: "256x256",
-      response_format: "b64_json",
+      response_format: "url",
     });
 
-    const image = response.data.data[0].b64_json;
+    const image = response.data.data[0].url;
+    console.log(response.data);
     res.status(200).json({ photo: image });
   } catch (error) {
     console.log(error);

@@ -1,17 +1,28 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "../MainPage/MainPage.jsx";
-
+import AuthPage from "../AuthPage/AuthPage.jsx";
+import NavBar from "../../components/NavBar.jsx";
+import { getUser } from "../../utilities/users-service.jsx";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [user, setUser] = useState(true);
 
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <MainPage />
-    </>
+    <main className="App">
+      {user ? (
+        <>
+          <NavBar user={user} />
+          <Routes>
+            {/* <Route path="/orders/new" element={<NewOrderPage />} /> */}
+            <Route path="/mood" element={<MainPage />} />
+          </Routes>
+        </>
+      ) : (
+        <AuthPage path="/" setUser={setUser} />
+      )}
+    </main>
   );
 }
 

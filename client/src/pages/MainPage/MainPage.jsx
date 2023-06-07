@@ -23,7 +23,7 @@ const MainPage = () => {
           body: JSON.stringify({ prompt: form.prompt }),
         });
         const data = await res.json();
-        setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo} ` });
+        setForm({ ...form, photo: data.photo });
       } catch (error) {
         console.log(error);
       }
