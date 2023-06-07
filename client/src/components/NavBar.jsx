@@ -12,7 +12,7 @@ export default function NavBar({ user, setUser }) {
     <nav>
       <Link to="/collections">collections</Link>
       &nbsp; | &nbsp;
-      <Link to="/mood">Create Mood</Link>
+      <Link to="/">Create Mood</Link>
       {user && <p>Welcome, {user.name} </p>}
       {/* shows only if there is a user */}
       <Link to="" onClick={handleLogOut}>
