@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import MoodForm from "../../components/MoodForm";
 import MoodImage from "../../components/MoodImage";
 
-const MainPage = () => {
+const MainPage = ({ user }) => {
   const [form, setForm] = useState({
     name: "",
     prompt: "",
@@ -30,7 +30,21 @@ const MainPage = () => {
     }
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("http://localhost:3001/api/collections", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          user: user._id,
+        },
+        body: JSON.stringify({ ...form }),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -64,10 +78,13 @@ const MainPage = () => {
           <button type="button" onClick={createImg}>
             {img ? "Creating your mood" : "Create btn"}
           </button>
+          <div>
+            Add this to your collection
+            <button type="submit">Add</button>
+          </div>
         </form>
       </div>
     </section>
   );
 };
-
 export default MainPage;

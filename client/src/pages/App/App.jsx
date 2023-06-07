@@ -5,6 +5,7 @@ import AuthPage from "../AuthPage/AuthPage.jsx";
 import NavBar from "../../components/NavBar.jsx";
 import { getUser } from "../../utilities/users-service.js";
 import "./App.css";
+import Collections from "../Collections/Collections.jsx";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -15,8 +16,8 @@ function App() {
         <>
           <NavBar user={user} />
           <Routes>
-            {/* <Route path="/orders/new" element={<NewOrderPage />} /> */}
-            <Route path="/" element={<MainPage />} />
+            <Route path="/collections" element={<Collections />} />
+            <Route path="/" element={<MainPage user={user} />} />
           </Routes>
         </>
       ) : (
