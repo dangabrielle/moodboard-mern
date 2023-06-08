@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getToken } from "../../utilities/users-service";
+import MoodImage from "../../components/MoodImage";
 
 const Collections = ({ user }) => {
   const [collections, setCollections] = useState([]);
 
   const getCollections = async () => {
     try {
-      const token = getToken();
-      console.log(token);
       const res = await fetch("http://localhost:3001/api/collections", {
         method: "GET",
         headers: {
@@ -37,13 +35,9 @@ const Collections = ({ user }) => {
   return (
     <>
       <div>Collections</div>
-      <div>
+      <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {collections.map((collection) => (
-          <div key={collection._id}>
-            <h3>{collection.name}</h3>
-            <p>{collection.prompt}</p>
-            <img src={collection.photo} alt={collection.name} />
-          </div>
+          <MoodImage key={collection._id} data={collection} />
         ))}
       </div>
     </>
