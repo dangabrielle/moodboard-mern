@@ -16,7 +16,7 @@ function App() {
         <>
           <NavBar user={user} />
           <Routes>
-            <Route path="/collections" element={<Collections />} />
+            <Route path="/collections" element={<Collections user={user} />} />
             <Route path="/" element={<MainPage user={user} />} />
           </Routes>
         </>
