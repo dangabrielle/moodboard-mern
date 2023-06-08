@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import MoodForm from "../../components/MoodForm";
 import MoodImage from "../../components/MoodImage";
+import bookAnimation from "../../assets/bookAnimation.gif";
+import { useNavigate } from "react-router-dom";
 
 const MainPage = ({ user }) => {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
     prompt: "",
@@ -42,6 +45,7 @@ const MainPage = ({ user }) => {
         body: JSON.stringify(form),
       });
       await res.json();
+      navigate("/collections");
     } catch (error) {
       console.log(error);
     }
@@ -53,10 +57,13 @@ const MainPage = ({ user }) => {
   };
 
   return (
-    <section>
+    <section className="flex flex-col justify-items-center">
       <h1>What's the mood?</h1>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form
+          className="flex flex-col justify-center items-center"
+          onSubmit={handleSubmit}
+        >
           <MoodForm
             labelName="Your name"
             placeholder="Enter your name"
@@ -73,11 +80,24 @@ const MainPage = ({ user }) => {
             value={form.prompt}
             handleChange={handleChange}
           />
-          <div>
-            {form.photo ? <img src={form.photo} /> : "Placeholder image"}
+
+          <div className="place-content-center max-w-sm p-6 bg-white border border-gray-100 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-700 m-0">
+            {form.photo ? (
+              <img src={form.photo} />
+            ) : (
+              <div>
+                <img
+                  src={bookAnimation}
+                  className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white opacity-20"
+                />
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white opacity-20">
+                  Noteworthy technology acquisitions 2021
+                </h5>
+              </div>
+            )}
           </div>
           <button type="button" onClick={createImg}>
-            {img ? "Creating your mood" : "Create btn"}
+            {img ? "What a mood!" : "Create Mood Card"}
           </button>
           <div>
             Add this to your collection
