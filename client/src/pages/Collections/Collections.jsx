@@ -13,7 +13,6 @@ const Collections = ({ user }) => {
         headers: {
           "Content-Type": "application/json",
           user: user._id,
-          Authorization: `Bearer ${token}`,
         },
       });
       if (res.ok) {
@@ -35,13 +34,6 @@ const Collections = ({ user }) => {
     console.log("collections", collections);
   }, [collections]);
 
-  useEffect(() => {
-    // Convert collections object into an array
-    const collectionsArray = Object.values(collections);
-
-    // Update the state with the collections array
-    setCollections(collectionsArray);
-  }, []);
   return (
     <>
       <div>Collections</div>

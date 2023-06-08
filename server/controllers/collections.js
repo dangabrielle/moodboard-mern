@@ -1,16 +1,25 @@
 const User = require("../models/user");
+const cloudinary = require("cloudinary");
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_SECRET,
+});
 
 async function create(req, res) {
   try {
-    // console.log("req", req);
+    const { name, prompt, photo } = req.body;
+    const imgUrl = await cloudinary.uploader.upload(photo);
+    console.log("cloudinary url", imgUrl);
     const foundUser = await User.findById(req.headers.user);
     console.log("user found", foundUser);
-    foundUser.collections.push(req.body);
+    foundUser.collections.push({ name, prompt, photo: imgUrl.url });
     await foundUser.save();
 
     res
       .status(200)
-      .json({ message: "Collection added successfully", foundUser });
+      .json({ message: "Collection added successfully", data: foundUser });
   } catch (error) {
     console.error("Error saving data:", error);
     res.sendStatus(500);
