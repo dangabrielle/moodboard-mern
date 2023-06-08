@@ -39,8 +39,9 @@ const MainPage = ({ user }) => {
           "Content-Type": "application/json",
           user: user._id,
         },
-        body: JSON.stringify({ ...form }),
+        body: JSON.stringify(form),
       });
+      await res.json();
     } catch (error) {
       console.log(error);
     }
