@@ -8,3 +8,5 @@
     grid-row: auto/span 2;
   }
 }
+
+/* media query applied for screens greater than 480px, takes every 7th card el and applies specific styles. 'auto/span 2' adjusts the size to span 2 columns and 2 rows within the grid layout */
