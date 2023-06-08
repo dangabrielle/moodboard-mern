@@ -17,6 +17,20 @@ async function create(req, res) {
   }
 }
 
+async function index(req, res) {
+  try {
+    const foundUser = await User.findById(req.headers.user);
+    console.log("user", foundUser);
+    const collections = foundUser.collections;
+    console.log("collections", collections);
+    res.status(200).json({ data: collections });
+  } catch (error) {
+    console.error("Error saving data:", error);
+    res.sendStatus(500);
+  }
+}
+
 module.exports = {
   create,
+  index,
 };
