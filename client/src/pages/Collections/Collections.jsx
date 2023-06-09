@@ -6,13 +6,16 @@ const Collections = ({ user }) => {
 
   const getCollections = async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/collections", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          user: user._id,
-        },
-      });
+      const res = await fetch(
+        "http://moodboard-mern.herokuapp.com/api/collections",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            user: user._id,
+          },
+        }
+      );
       if (res.ok) {
         const responseData = await res.json();
         console.log("response data", responseData);

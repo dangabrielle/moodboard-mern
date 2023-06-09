@@ -19,13 +19,16 @@ const MainPage = ({ user }) => {
     if (form.prompt) {
       try {
         setImg(true);
-        const res = await fetch("http://localhost:3001/api/v1/dalle", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ prompt: form.prompt }),
-        });
+        const res = await fetch(
+          "http://moodboard-mern.herokuapp.com/api/v1/dalle",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ prompt: form.prompt }),
+          }
+        );
         const data = await res.json();
         setForm({ ...form, photo: data.photo });
       } catch (error) {
@@ -37,14 +40,17 @@ const MainPage = ({ user }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3001/api/collections", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          user: user._id,
-        },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        "http://moodboard-mern.herokuapp.com/api/collections",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            user: user._id,
+          },
+          body: JSON.stringify(form),
+        }
+      );
       await res.json();
       navigate("/collections");
     } catch (error) {
