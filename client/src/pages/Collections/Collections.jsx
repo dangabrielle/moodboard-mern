@@ -34,7 +34,6 @@ const Collections = ({ user }) => {
 
   return (
     <>
-      <div>Collections</div>
       <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {collections.map((collection) => (
           <MoodImage key={collection._id} data={collection} />

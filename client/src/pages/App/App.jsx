@@ -8,7 +8,7 @@ import "./App.css";
 import Collections from "../Collections/Collections.jsx";
 
 function App() {
-  const [user, setUser] = useState(getUser());
+  const [user, setUser] = useState(getUser);
 
   return (
     <main className="bg-cover">
@@ -21,7 +21,7 @@ function App() {
           </Routes>
         </>
       ) : (
-        <AuthPage path="/" setUser={setUser} />
+        <AuthPage path="/" user={user} setUser={setUser} />
       )}
     </main>
   );

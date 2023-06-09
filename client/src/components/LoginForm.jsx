@@ -31,22 +31,30 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div>
-      <div className="form-container">
-        <form autoComplete="off" onSubmit={handleSubmit}>
+      <div>
+        <form
+          autoComplete="off"
+          onSubmit={handleSubmit}
+          className="form-container flex flex-col justify-center items-center gap-2"
+        >
           <label>Email</label>
           <input
+            className="appearance-none block w-[30%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             type="text"
             name="email"
             value={credentials.email}
+            placeholder="hello@email.com"
             onChange={handleChange}
             required
           />
           <label>Password</label>
           <input
+            className="appearance-none block w-[30%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             type="password"
             name="password"
             value={credentials.password}
             onChange={handleChange}
+            placeholder="**********"
             required
           />
           <button type="submit">LOG IN</button>
