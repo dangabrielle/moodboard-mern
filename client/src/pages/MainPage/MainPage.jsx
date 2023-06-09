@@ -20,7 +20,7 @@ const MainPage = ({ user }) => {
       try {
         setImg(true);
         const res = await fetch(
-          "http://moodboard-mern.herokuapp.com/api/v1/dalle",
+          "https://moodboard-mern.herokuapp.com/api/v1/dalle",
           {
             method: "POST",
             headers: {
@@ -41,7 +41,7 @@ const MainPage = ({ user }) => {
     e.preventDefault();
     try {
       const res = await fetch(
-        "http://moodboard-mern.herokuapp.com/api/collections",
+        "https://moodboard-mern.herokuapp.com/api/collections",
         {
           method: "POST",
           headers: {

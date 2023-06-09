@@ -7,7 +7,7 @@ const Collections = ({ user }) => {
   const getCollections = async () => {
     try {
       const res = await fetch(
-        "http://moodboard-mern.herokuapp.com/api/collections",
+        "https://moodboard-mern.herokuapp.com/api/collections",
         {
           method: "GET",
           headers: {

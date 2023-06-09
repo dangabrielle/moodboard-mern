@@ -1,6 +1,6 @@
 import sendRequest from "./send-request";
 
-const BASE_URL = "http://moodboard-mern.herokuapp.com/api/users";
+const BASE_URL = "https://moodboard-mern.herokuapp.com/api/users";
 
 export function signUp(userData) {
   return sendRequest(BASE_URL, "POST", userData);
