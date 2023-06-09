@@ -31,13 +31,13 @@ Deployed on Heroku & Netlify:
 
 ## Technologies Used
 
-MongoDB, Mongoose, Express, React, Node.js
-JavaScript, Tailwind, CSS, HTML, Vite, Cloudinary
+MongoDB, Mongoose, Express, React, Node.js,
+JavaScript, Tailwind, CSS, HTML, Vite, Cloudinary,
 Heroku, Netlify
 
 ## MoodBoard
 
-<img src="./client/src/assets/login-pg.png" width="500px" height="450px"> <img src="./client/src/assets/signup-pg.png" width="500px" height="450px"> <img src="./client/src/assets/createAI.png" width="500px" height="450px"> <img src="./client/src/assets/collections-pg.png" width="500px" height="450px">
+<img src="./client/src/assets/login-pg.png"> <img src="./client/src/assets/signup-pg.png"> <img src="./client/src/assets/createAI.png"/> <img src="./client/src/assets/collections-pg.png">
 
 ## Next Steps
 
