@@ -1,6 +1,6 @@
 <h1> MOODBOARD AI </h1>
 <h3>Create your own personal moodboard using DALL-E OpenAI API</h3>
-<p></p>
+<p>Explore an imaginative field of images created by AI. Here, you create an image by entering a prompt and add that image to your collection. </p>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -13,7 +13,7 @@
       <a href="#technologies-used">Technologies Used</a></li>
     </li>
     <li>
-      <a href="#game-board">Game Board</a>
+      <a href="#game-board">MoodBoard</a>
     </li>
     <li>
       <a href="#next-steps">Next Steps</a>
@@ -27,13 +27,14 @@
 ## Getting Started
 
 Insert txt here
-<a href="">Click here to start creating!</a>
+<a href="https://moodboard-mern.netlify.app/">Click here to start creating!</a>
 
 ## Technologies Used
 
-JavaScript, CSS, HTML
+MongoDB, Mongoose, Express, React, Node.js
+JavaScript, Tailwind, CSS, HTML, Vite, Cloudinary
 
-## Game Board
+## MoodBoard
 
 <img src=""> 
 <img src="">
@@ -41,13 +42,14 @@ JavaScript, CSS, HTML
 ## Next Steps
 
 <ul>
- 
+ <li>Create a search bar feature to filter through images</li>
+ <li>Create multiple moodboards based on different themes (tropical, winter, autumn)</li>
 </ul>
 
 ## Acknowledgments
 
 <ul>
-  <li> <a href="">1</a>
-  <li> <a href="">2</a>
-  <li> <a href="">3</a>
+  <li> <a href="https://platform.openai.com/docs/guides/images/introduction">OPEN AI API Documentation</a>
+  <li> <a href="https://tailwindcss.com/">Tailwind</a>
+  <li> <a href=" https://dev.to/stlnick/how-to-deploy-a-full-stack-mern-app-with-heroku-netlify-ncb">Deployment Heroku/Netlify</a>
 </ul>
