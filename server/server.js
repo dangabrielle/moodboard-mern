@@ -6,7 +6,7 @@ const app = express();
 
 require("dotenv").config();
 require("./config/database");
-app.use(express.json()); // Creates req.body
+app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors());
 
