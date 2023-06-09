@@ -27,7 +27,7 @@
 ## Getting Started
 
 Insert txt here
-<a href="https://moodboard-mern.netlify.app/">Click here to start creating!</a>
+<a href="https://moodboard-mern.netlify.app/" width="250px">Click here to start creating!</a>
 
 ## Technologies Used
 
@@ -36,8 +36,10 @@ JavaScript, Tailwind, CSS, HTML, Vite, Cloudinary
 
 ## MoodBoard
 
-<img src="./client/src/assets/login-pg.png"> 
-<img src="">
+<img src="./client/src/assets/login-pg.png" width="250px"> 
+<img src="./client/src/assets/signup-pg.png" width="250px"> 
+<img src="./client/src/assets/createAI.png" width="250px"> 
+<img src="./client/src/assets/collections-pg.png" width="250px">
 
 ## Next Steps
 
