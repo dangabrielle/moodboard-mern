@@ -82,7 +82,7 @@ const MainPage = ({ user }) => {
             handleChange={handleChange}
           />
 
-          <div className="place-content-center max-w-sm p-6 bg-white border border-gray-100 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-700 m-0">
+          <div className="relative place-content-center max-w-sm p-6 bg-white border border-gray-100 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-700 m-0">
             {form.photo ? (
               <img src={form.photo} />
             ) : (
@@ -91,9 +91,8 @@ const MainPage = ({ user }) => {
                   src={bookAnimation}
                   className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white opacity-50"
                 />
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white opacity-20"></h5>
                 {img && (
-                  <div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg">
+                  <div className="absolute inset-0 z-0 rounded-lg bg-[rgba(0,0,0,0.1)] ">
                     <Loader />
                   </div>
                 )}
