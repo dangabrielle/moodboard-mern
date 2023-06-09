@@ -49,7 +49,7 @@ export default class SignUpForm extends Component {
               className="appearance-none block w-[30%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="text"
               name="name"
-              placeholder="John"
+              placeholder="Moody"
               value={this.state.name}
               onChange={this.handleChange}
               required
@@ -58,7 +58,7 @@ export default class SignUpForm extends Component {
             <input
               className="appearance-none block w-[30%] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="email"
-              placeholder="Doe"
+              placeholder="moody@gmail.com"
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
