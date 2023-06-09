@@ -2,19 +2,27 @@
 
 #root {
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
 body {
-  background-image: url("../../assets/lakeside.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: "Bodoni Moda", serif;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  background-image: url("../../assets/lakeside.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.bg-fit {
+  margin-bottom: 15rem;
+  margin-top: 5rem;
 }
 
 @keyframes fadeInAnimation {

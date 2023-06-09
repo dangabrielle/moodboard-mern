@@ -11,7 +11,7 @@ function App() {
   const [user, setUser] = useState(getUser);
 
   return (
-    <main className="bg-cover">
+    <main className="">
       {user ? (
         <>
           <NavBar user={user} />
