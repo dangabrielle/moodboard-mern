@@ -18,9 +18,7 @@ const Collections = ({ user }) => {
       );
       if (res.ok) {
         const responseData = await res.json();
-        console.log("response data", responseData);
         setCollections(responseData.data);
-        // console.log("collections", collections);
       }
     } catch (error) {
       console.log(error);
