@@ -100,7 +100,7 @@ const MainPage = ({ user }) => {
             )}
           </div>
           <button
-            className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group"
+            className="m-5 relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group"
             type="button"
             onClick={createImg}
           >
@@ -123,9 +123,15 @@ const MainPage = ({ user }) => {
 
             {img ? "What a mood!" : "Create Mood Card"}
           </button>
-          <div>
-            Add this to your collection
-            <button type="submit">Add</button>
+          <div className="m-5">
+            <button
+              className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400"
+              type="submit"
+            >
+              <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Add to your mood collection
+              </span>
+            </button>
           </div>
         </form>
       </div>
