@@ -16,7 +16,7 @@ async function create(req, res) {
     const response = await openai.createImage({
       prompt,
       n: 1,
-      size: "256x256",
+      size: "512x512",
       response_format: "url",
     });
 
