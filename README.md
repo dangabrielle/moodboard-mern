@@ -36,10 +36,10 @@ JavaScript, Tailwind, CSS, HTML, Vite, Cloudinary
 
 ## MoodBoard
 
-<img src="./client/src/assets/login-pg.png" width="250px"> 
-<img src="./client/src/assets/signup-pg.png" width="250px"> 
-<img src="./client/src/assets/createAI.png" width="250px"> 
-<img src="./client/src/assets/collections-pg.png" width="250px">
+<img src="./client/src/assets/login-pg.png" width="400px"> 
+<img src="./client/src/assets/signup-pg.png" width="400px"> 
+<img src="./client/src/assets/createAI.png" width="400px"> 
+<img src="./client/src/assets/collections-pg.png" width="400px">
 
 ## Next Steps
 
