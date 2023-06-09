@@ -3,6 +3,7 @@ import MoodForm from "../../components/MoodForm";
 import MoodImage from "../../components/MoodImage";
 import bookAnimation from "../../assets/bookAnimation.gif";
 import { useNavigate } from "react-router-dom";
+import Loader from "../../components/Loader";
 
 const MainPage = ({ user }) => {
   const navigate = useNavigate();
@@ -61,7 +62,7 @@ const MainPage = ({ user }) => {
       <h1>What's the mood?</h1>
       <div>
         <form
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center "
           onSubmit={handleSubmit}
         >
           <MoodForm
@@ -88,15 +89,39 @@ const MainPage = ({ user }) => {
               <div>
                 <img
                   src={bookAnimation}
-                  className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white opacity-20"
+                  className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white opacity-50"
                 />
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white opacity-20">
-                  Noteworthy technology acquisitions 2021
-                </h5>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white opacity-20"></h5>
+                {img && (
+                  <div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg">
+                    <Loader />
+                  </div>
+                )}
               </div>
             )}
           </div>
-          <button type="button" onClick={createImg}>
+          <button
+            className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group"
+            type="button"
+            onClick={createImg}
+          >
+            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
+            </span>
+
             {img ? "What a mood!" : "Create Mood Card"}
           </button>
           <div>
@@ -109,3 +134,29 @@ const MainPage = ({ user }) => {
   );
 };
 export default MainPage;
+
+<a
+  href="#_"
+  class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group"
+>
+  <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M14 5l7 7m0 0l-7 7m7-7H3"
+      ></path>
+    </svg>
+  </span>
+  <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">
+    Button Text
+  </span>
+  <span class="relative invisible">Button Text</span>
+</a>;
