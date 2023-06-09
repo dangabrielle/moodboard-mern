@@ -1,6 +1,6 @@
 <h1> MOODBOARD AI </h1>
 <h3>Create your own personal moodboard using DALL-E OpenAI API</h3>
-<p>Explore an imaginative field of images created by AI. Here, you create an image by entering a prompt and add that image to your collection. </p>
+<p>Explore an imaginative field of images created by AI. Here, you create an image by entering a prompt. You can then add that AI generated image to set a mood to your collection. </p>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -26,17 +26,18 @@
 
 ## Getting Started
 
-Insert txt here
+Deployed on Heroku & Netlify:
 <a href="https://moodboard-mern.netlify.app/" width="250px">Click here to start creating!</a>
 
 ## Technologies Used
 
 MongoDB, Mongoose, Express, React, Node.js
 JavaScript, Tailwind, CSS, HTML, Vite, Cloudinary
+Heroku, Netlify
 
 ## MoodBoard
 
-<img src="./client/src/assets/login-pg.png" width="400px"> <img src="./client/src/assets/signup-pg.png" width="400px"> <img src="./client/src/assets/createAI.png" width="400px"> <img src="./client/src/assets/collections-pg.png" width="400px">
+<img src="./client/src/assets/login-pg.png" width="500px" height="450px"> <img src="./client/src/assets/signup-pg.png" width="500px" height="450px"> <img src="./client/src/assets/createAI.png" width="500px" height="450px"> <img src="./client/src/assets/collections-pg.png" width="500px" height="450px">
 
 ## Next Steps
 
@@ -50,5 +51,5 @@ JavaScript, Tailwind, CSS, HTML, Vite, Cloudinary
 <ul>
   <li> <a href="https://platform.openai.com/docs/guides/images/introduction">OPEN AI API Documentation</a>
   <li> <a href="https://tailwindcss.com/">Tailwind</a>
-  <li> <a href=" https://dev.to/stlnick/how-to-deploy-a-full-stack-mern-app-with-heroku-netlify-ncb">Deployment Heroku/Netlify</a>
+  <li> <a href="https://dev.to/stlnick/how-to-deploy-a-full-stack-mern-app-with-heroku-netlify-ncb">Deployment Heroku/Netlify</a>
 </ul>
